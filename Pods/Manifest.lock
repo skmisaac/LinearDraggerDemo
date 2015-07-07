@@ -1,0 +1,13 @@
+PODS:
+  - GoogleMaps (1.10.1)
+  - iOS-MagnifyingGlass (0.0.2)
+
+DEPENDENCIES:
+  - GoogleMaps
+  - iOS-MagnifyingGlass (~> 0.0.2)
+
+SPEC CHECKSUMS:
+  GoogleMaps: ebf08677f181d9c2dcdbd1721d206f02beccc9b1
+  iOS-MagnifyingGlass: b11b7d3e8be7de22c85f0edcaa75538bdf0827dc
+
+COCOAPODS: 0.37.2
