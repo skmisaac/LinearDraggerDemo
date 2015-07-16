@@ -8,7 +8,7 @@
 
 #import "ACMagnifyingView.h"
 #import "ACMagnifyingGlass.h"
-
+#import "GoogleMaps/GoogleMaps.h"
 
 static CGFloat const kACMagnifyingViewDefaultShowDelay = 0.5;
 
@@ -16,16 +16,18 @@ static CGFloat const kACMagnifyingViewDefaultShowDelay = 0.5;
 
 @end
 
+@implementation ACMagnifyingView {
 
-@implementation ACMagnifyingView
+}
 
 @synthesize magnifyingGlass, magnifyingGlassShowDelay;
 @synthesize touchTimer;
-
+@synthesize mapView;
 
 - (id)initWithFrame:(CGRect)frame {
 	if (self = [super initWithFrame:frame]) {
 		self.magnifyingGlassShowDelay = kACMagnifyingViewDefaultShowDelay;
+        m_isShown = false;
 	}
 	return self;
 }
@@ -40,11 +42,13 @@ static CGFloat const kACMagnifyingViewDefaultShowDelay = 0.5;
 													 selector:@selector(addMagnifyingGlassTimer:)
 													 userInfo:[NSValue valueWithCGPoint:[touch locationInView:self]]
 													  repeats:NO];
+    
 }
 
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
-//	UITouch *touch = [touches anyObject];
-//	[self updateMagnifyingGlassAtPoint:[touch locationInView:self]];
+        UITouch *touch = [touches anyObject];
+	[self updateMagnifyingGlassAtPoint:[touch locationInView:self]];
+        [mapView setUserInteractionEnabled: NO];
     
 }
 
@@ -52,6 +56,7 @@ static CGFloat const kACMagnifyingViewDefaultShowDelay = 0.5;
 	[self.touchTimer invalidate];
 	self.touchTimer = nil;
 	[self removeMagnifyingGlass];
+        [mapView setUserInteractionEnabled: YES];
 }
 
 #pragma mark - private functions
@@ -77,15 +82,22 @@ static CGFloat const kACMagnifyingViewDefaultShowDelay = 0.5;
 	
 	magnifyingGlass.touchPoint = point;
 	[self.superview addSubview:magnifyingGlass];
+        m_isShown = YES;
 	[magnifyingGlass setNeedsDisplay];
 }
 
 - (void)removeMagnifyingGlass {
 	[magnifyingGlass removeFromSuperview];
+        m_isShown = NO;
 }
 
 - (void)updateMagnifyingGlassAtPoint:(CGPoint)point {
 	magnifyingGlass.touchPoint = point;
 	[magnifyingGlass setNeedsDisplay];
+}
+
+- (bool)getIsShown
+{
+    return m_isShown;
 }
 @end

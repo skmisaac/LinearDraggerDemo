@@ -12,11 +12,14 @@
 @class GMSMapView;
 
 @interface ACMagnifyingView : UIView
+{
+    bool m_isShown;
+}
 
 @property (nonatomic, retain) ACMagnifyingGlass *magnifyingGlass;
 @property (nonatomic, assign) CGFloat magnifyingGlassShowDelay;
 @property (nonatomic, retain) NSTimer *touchTimer;
-@property (nonatomic, assign) GMSMapView *mapView;
+@property (nonatomic, retain) GMSMapView *mapView;
 
 - (void)addMagnifyingGlassAtPoint:(CGPoint)point;
 - (void)addMagnifyingGlassTimer:(NSTimer*)timer;
@@ -25,5 +28,6 @@
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event;
 - (void)removeMagnifyingGlass;
 - (void)updateMagnifyingGlassAtPoint:(CGPoint)point;
+- (bool)getIsShown;
 
 @end

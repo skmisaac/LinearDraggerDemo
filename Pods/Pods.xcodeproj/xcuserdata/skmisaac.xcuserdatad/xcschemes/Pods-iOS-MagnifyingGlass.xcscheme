@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "44303CE985507B7D00042B03"
+               BlueprintIdentifier = "A910FFED6D8AAED525774257"
                BuildableName = "libPods-iOS-MagnifyingGlass.a"
                BlueprintName = "Pods-iOS-MagnifyingGlass"
                ReferencedContainer = "container:Pods.xcodeproj">

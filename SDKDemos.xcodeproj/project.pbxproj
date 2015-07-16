@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		5630262E1B4A4543005AA216 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56EDAF761B38112E00A7FFD2 /* Main.storyboard */; };
+		56306C061B4CDA6E00EE30C1 /* libPods-iOS-MagnifyingGlass.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 56306C051B4CDA6E00EE30C1 /* libPods-iOS-MagnifyingGlass.a */; };
+		56306C081B4CDA8B00EE30C1 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56306C071B4CDA8B00EE30C1 /* GoogleMaps.framework */; };
+		569DDF401B553F7500928C8B /* GoogleDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569DDF3F1B553F7500928C8B /* GoogleDataProvider.swift */; };
+		569DDF421B553FAC00928C8B /* GooglePlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569DDF411B553FAC00928C8B /* GooglePlace.swift */; };
+		569DDF461B56409700928C8B /* TypesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569DDF451B56409700928C8B /* TypesTableViewController.swift */; };
+		569DDF481B56413700928C8B /* MarkerInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569DDF471B56413700928C8B /* MarkerInfoView.swift */; };
+		569DDF4A1B56418700928C8B /* MarkerInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 569DDF491B56418700928C8B /* MarkerInfoView.xib */; };
+		569DDF4E1B5645A200928C8B /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569DDF4D1B5645A200928C8B /* UIViewExtension.swift */; };
+		569DDF501B564A1800928C8B /* PlaceMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569DDF4F1B564A1800928C8B /* PlaceMarker.swift */; };
 		56EDAF731B38112E00A7FFD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EDAF721B38112E00A7FFD2 /* AppDelegate.swift */; };
 		56EDAF751B38112E00A7FFD2 /* GMSMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EDAF741B38112E00A7FFD2 /* GMSMapViewController.swift */; };
 		56EDAF781B38112E00A7FFD2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56EDAF761B38112E00A7FFD2 /* Main.storyboard */; };
@@ -33,6 +42,15 @@
 		563026301B4A454D005AA216 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		563026311B4A455B005AA216 /* libPods-iOS-MagnifyingGlass.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-iOS-MagnifyingGlass.a"; path = "Pods/../build/Debug-iphoneos/libPods-iOS-MagnifyingGlass.a"; sourceTree = "<group>"; };
 		563026361B4A465C005AA216 /* libPods-iOS-MagnifyingGlass.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-iOS-MagnifyingGlass.a"; path = "Pods/../build/Debug-iphoneos/libPods-iOS-MagnifyingGlass.a"; sourceTree = "<group>"; };
+		56306C051B4CDA6E00EE30C1 /* libPods-iOS-MagnifyingGlass.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-iOS-MagnifyingGlass.a"; path = "Pods/../build/Debug-iphoneos/libPods-iOS-MagnifyingGlass.a"; sourceTree = "<group>"; };
+		56306C071B4CDA8B00EE30C1 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = Pods/GoogleMaps/Frameworks/GoogleMaps.framework; sourceTree = "<group>"; };
+		569DDF3F1B553F7500928C8B /* GoogleDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleDataProvider.swift; sourceTree = "<group>"; };
+		569DDF411B553FAC00928C8B /* GooglePlace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GooglePlace.swift; sourceTree = "<group>"; };
+		569DDF451B56409700928C8B /* TypesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypesTableViewController.swift; sourceTree = "<group>"; };
+		569DDF471B56413700928C8B /* MarkerInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkerInfoView.swift; sourceTree = "<group>"; };
+		569DDF491B56418700928C8B /* MarkerInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MarkerInfoView.xib; sourceTree = "<group>"; };
+		569DDF4D1B5645A200928C8B /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		569DDF4F1B564A1800928C8B /* PlaceMarker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceMarker.swift; sourceTree = "<group>"; };
 		56EDAF6D1B38112E00A7FFD2 /* SDKDemos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SDKDemos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56EDAF711B38112E00A7FFD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56EDAF721B38112E00A7FFD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -54,6 +72,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56306C081B4CDA8B00EE30C1 /* GoogleMaps.framework in Frameworks */,
+				56306C061B4CDA6E00EE30C1 /* libPods-iOS-MagnifyingGlass.a in Frameworks */,
 				DEDF46AF1CEF90C1E7D932C2 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -84,6 +104,37 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
+		566B3B7A1B4BC1BC00FE4993 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				569DDF3F1B553F7500928C8B /* GoogleDataProvider.swift */,
+				569DDF411B553FAC00928C8B /* GooglePlace.swift */,
+				569DDF4F1B564A1800928C8B /* PlaceMarker.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		569DDF431B56405700928C8B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				56EDAF761B38112E00A7FFD2 /* Main.storyboard */,
+				569DDF491B56418700928C8B /* MarkerInfoView.xib */,
+				56EDAF7B1B38112E00A7FFD2 /* LaunchScreen.xib */,
+				569DDF471B56413700928C8B /* MarkerInfoView.swift */,
+				569DDF4D1B5645A200928C8B /* UIViewExtension.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		569DDF441B56406400928C8B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				56EDAF741B38112E00A7FFD2 /* GMSMapViewController.swift */,
+				569DDF451B56409700928C8B /* TypesTableViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		56EDAF641B38112E00A7FFD2 = {
 			isa = PBXGroup;
 			children = (
@@ -109,12 +160,11 @@
 			isa = PBXGroup;
 			children = (
 				56EDAF721B38112E00A7FFD2 /* AppDelegate.swift */,
-				56EDAF741B38112E00A7FFD2 /* GMSMapViewController.swift */,
-				56EDAF761B38112E00A7FFD2 /* Main.storyboard */,
+				569DDF441B56406400928C8B /* Controllers */,
+				569DDF431B56405700928C8B /* Views */,
+				566B3B7A1B4BC1BC00FE4993 /* Models */,
 				56EDAF791B38112E00A7FFD2 /* Images.xcassets */,
-				56EDAF7B1B38112E00A7FFD2 /* LaunchScreen.xib */,
 				56EDAF701B38112E00A7FFD2 /* Supporting Files */,
-				56EDAF921B38F5AB00A7FFD2 /* SDKDemos-Bridging-Header.h */,
 			);
 			path = SDKDemos;
 			sourceTree = "<group>";
@@ -122,6 +172,7 @@
 		56EDAF701B38112E00A7FFD2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				56EDAF921B38F5AB00A7FFD2 /* SDKDemos-Bridging-Header.h */,
 				56EDAF711B38112E00A7FFD2 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -147,6 +198,8 @@
 		EEA2CDD177F0348CC5863237 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				56306C071B4CDA8B00EE30C1 /* GoogleMaps.framework */,
+				56306C051B4CDA6E00EE30C1 /* libPods-iOS-MagnifyingGlass.a */,
 				563026361B4A465C005AA216 /* libPods-iOS-MagnifyingGlass.a */,
 				563026311B4A455B005AA216 /* libPods-iOS-MagnifyingGlass.a */,
 				A731EA349CD8066B4DD269CD /* libPods.a */,
@@ -237,6 +290,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				569DDF4A1B56418700928C8B /* MarkerInfoView.xib in Resources */,
 				56EDAF781B38112E00A7FFD2 /* Main.storyboard in Resources */,
 				56EDAF7D1B38112E00A7FFD2 /* LaunchScreen.xib in Resources */,
 				56EDAF7A1B38112E00A7FFD2 /* Images.xcassets in Resources */,
@@ -292,6 +346,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				56EDAF751B38112E00A7FFD2 /* GMSMapViewController.swift in Sources */,
+				569DDF461B56409700928C8B /* TypesTableViewController.swift in Sources */,
+				569DDF401B553F7500928C8B /* GoogleDataProvider.swift in Sources */,
+				569DDF501B564A1800928C8B /* PlaceMarker.swift in Sources */,
+				569DDF421B553FAC00928C8B /* GooglePlace.swift in Sources */,
+				569DDF4E1B5645A200928C8B /* UIViewExtension.swift in Sources */,
+				569DDF481B56413700928C8B /* MarkerInfoView.swift in Sources */,
 				56EDAF731B38112E00A7FFD2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -357,6 +417,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -403,6 +464,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -423,14 +485,20 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B996B6AF040D5A144B24A9FA /* Pods.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/GoogleMaps/Frameworks",
+				);
 				INFOPLIST_FILE = SDKDemos/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SDKDemos/SDKDemos-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
 		};
@@ -438,18 +506,25 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = AB5900FC118E5F292CF8CA90 /* Pods.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/GoogleMaps/Frameworks",
+				);
 				INFOPLIST_FILE = SDKDemos/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SDKDemos/SDKDemos-Bridging-Header.h";
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;
 		};
 		56EDAF901B38112E00A7FFD2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB5900FC118E5F292CF8CA90 /* Pods.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -469,6 +544,7 @@
 		};
 		56EDAF911B38112E00A7FFD2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB5900FC118E5F292CF8CA90 /* Pods.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (

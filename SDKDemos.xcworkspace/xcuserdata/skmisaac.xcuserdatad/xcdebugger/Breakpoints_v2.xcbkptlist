@@ -10,12 +10,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SDKDemos/GMSMapViewController.swift"
-            timestampString = "457889165.216615"
+            timestampString = "458738462.204959"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "141"
-            endingLineNumber = "141"
-            landmarkName = "mapView(_:didLongPressAtCoordinate:)"
+            startingLineNumber = "267"
+            endingLineNumber = "267"
+            landmarkName = "isInBound(_:radius:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SDKDemos/GMSMapViewController.swift"
+            timestampString = "458738462.204959"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "259"
+            endingLineNumber = "259"
+            landmarkName = "selectMarkersInBound(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

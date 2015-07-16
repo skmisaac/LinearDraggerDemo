@@ -7,228 +7,228 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		063C5BEBEE484CAEC6F21833 /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 10E111AE689A303C07D7AA04 /* Pods-dummy.m */; };
-		2FD8C166EF0A46D2EFA1A4C8 /* ACLoupe.h in Headers */ = {isa = PBXBuildFile; fileRef = DA8F4309A0C299C27B9C63B3 /* ACLoupe.h */; };
-		430008B38699290E3E6C60E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D4CC5524B94489884FADE35 /* Foundation.framework */; };
-		4A5D60FA83B33A318F8F1F80 /* ACLoupe.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B457A16721F0463789335D1 /* ACLoupe.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		9F8214BFBB9BCFB5F83FC192 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D4CC5524B94489884FADE35 /* Foundation.framework */; };
-		B2818A879F2D6A6491065C7F /* ACMagnifyingView.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B2178DD2DD0CFD9FDAAF0C /* ACMagnifyingView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		BB1608EE44BBA19CB476AA32 /* ACMagnifyingView.h in Headers */ = {isa = PBXBuildFile; fileRef = CAEFA04AC6D7B8A5175947EB /* ACMagnifyingView.h */; };
-		D83556F70D37E7F1253FB828 /* ACMagnifyingGlass.m in Sources */ = {isa = PBXBuildFile; fileRef = 532823B91D093DAC1FDAB700 /* ACMagnifyingGlass.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		E2A2A06D4A2547BAC37A3D36 /* ACMagnifyingGlass.h in Headers */ = {isa = PBXBuildFile; fileRef = BE599D3633D4B8C04AF8232A /* ACMagnifyingGlass.h */; };
-		E4185651EC3190A344C48590 /* Pods-iOS-MagnifyingGlass-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CA09A6718598EEDFC9365536 /* Pods-iOS-MagnifyingGlass-dummy.m */; };
+		01E5E471EAFE6980A61920D3 /* ACMagnifyingView.h in Headers */ = {isa = PBXBuildFile; fileRef = F754C63BE740A6C9887AFE23 /* ACMagnifyingView.h */; };
+		0E9E37C2F6778396390C3860 /* ACMagnifyingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8B3E18FCFFADBF6C6D92C2 /* ACMagnifyingView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		0F9CBCD02A0F52096EAD136D /* ACLoupe.h in Headers */ = {isa = PBXBuildFile; fileRef = B4858BF94EDB43D478AB850E /* ACLoupe.h */; };
+		26B9CF10E51C9F8F648C8E3B /* Pods-iOS-MagnifyingGlass-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B3638D10E908A0D146EB682B /* Pods-iOS-MagnifyingGlass-dummy.m */; };
+		6A2D729D06331F07C6F63840 /* ACMagnifyingGlass.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CE35232E7739EEF673039C6 /* ACMagnifyingGlass.h */; };
+		6AF63C47C505341F808E24B3 /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DD5B6E812A42CDA53D28BFA6 /* Pods-dummy.m */; };
+		83D57E802EC9C5350D5BBB22 /* ACLoupe.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E99642F8DDFAF0093E8B8F8 /* ACLoupe.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		8BF0010637FA80309288D88C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 122DE8D86281D3D87DF886A9 /* Foundation.framework */; };
+		B604C73E6A04A71402C8D9C3 /* ACMagnifyingGlass.m in Sources */ = {isa = PBXBuildFile; fileRef = 72ECF6415883B30F7F43D888 /* ACMagnifyingGlass.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		DB281CB149FA24ACA9E782DD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 122DE8D86281D3D87DF886A9 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		5E1DA2E20FBA0DB990CCADEB /* PBXContainerItemProxy */ = {
+		EE3020262613E7565DD23EB7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 8BD7718CB53E6E5C430F0E1A /* Project object */;
+			containerPortal = 7E872A4CC933DF261F121AB2 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 44303CE985507B7D00042B03;
+			remoteGlobalIDString = A910FFED6D8AAED525774257;
 			remoteInfo = "Pods-iOS-MagnifyingGlass";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0146B99789330525905199C0 /* Pods-iOS-MagnifyingGlass-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iOS-MagnifyingGlass-Private.xcconfig"; sourceTree = "<group>"; };
-		0D4CC5524B94489884FADE35 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		10E111AE689A303C07D7AA04 /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
-		1DD74E5784E4613EE055E62E /* GoogleMaps.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = Frameworks/GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
-		39A4C173828BFA8ECE6B9C16 /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
-		3B457A16721F0463789335D1 /* ACLoupe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ACLoupe.m; path = MagnifyingGlass/ACLoupe.m; sourceTree = "<group>"; };
-		3B8A49E771A3D423CCE20E7D /* Pods-iOS-MagnifyingGlass.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iOS-MagnifyingGlass.xcconfig"; sourceTree = "<group>"; };
-		3CC41EC1F1560F23CA54B9D8 /* Pods-iOS-MagnifyingGlass-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-iOS-MagnifyingGlass-prefix.pch"; sourceTree = "<group>"; };
-		50D863382C82AADCF90D9010 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = Frameworks/GoogleMaps.framework; sourceTree = "<group>"; };
-		51471609EE147807C36EDEC9 /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
-		532823B91D093DAC1FDAB700 /* ACMagnifyingGlass.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ACMagnifyingGlass.m; path = MagnifyingGlass/ACMagnifyingGlass.m; sourceTree = "<group>"; };
-		5649F3CD9AFC3FD7734DA055 /* kb-loupe-hi_7.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "kb-loupe-hi_7.png"; path = "MagnifyingGlass/Resources/kb-loupe-hi_7.png"; sourceTree = "<group>"; };
-		56CA61577A11C266D0D2F6DE /* Pods-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-environment.h"; sourceTree = "<group>"; };
-		68AABEF2C4B6D6753E73A696 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		7B9E1E5C0AEAEB4048E000DC /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		943DA5177AA0571591FAF52A /* libPods-iOS-MagnifyingGlass.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iOS-MagnifyingGlass.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		957553D9FA9FAB3D45041779 /* kb-loupe-hi_6.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "kb-loupe-hi_6.png"; path = "MagnifyingGlass/Resources/kb-loupe-hi_6.png"; sourceTree = "<group>"; };
-		A2B2178DD2DD0CFD9FDAAF0C /* ACMagnifyingView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ACMagnifyingView.m; path = MagnifyingGlass/ACMagnifyingView.m; sourceTree = "<group>"; };
-		BE599D3633D4B8C04AF8232A /* ACMagnifyingGlass.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ACMagnifyingGlass.h; path = MagnifyingGlass/ACMagnifyingGlass.h; sourceTree = "<group>"; };
-		CA09A6718598EEDFC9365536 /* Pods-iOS-MagnifyingGlass-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-iOS-MagnifyingGlass-dummy.m"; sourceTree = "<group>"; };
-		CAEFA04AC6D7B8A5175947EB /* ACMagnifyingView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ACMagnifyingView.h; path = MagnifyingGlass/ACMagnifyingView.h; sourceTree = "<group>"; };
-		CFBA5D96AE3A963F117D8DF7 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
-		DA8F4309A0C299C27B9C63B3 /* ACLoupe.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ACLoupe.h; path = MagnifyingGlass/ACLoupe.h; sourceTree = "<group>"; };
-		E0B89E10DCB579CFB5750C33 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
-		F0AA92F1BF814F1307D649D6 /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
+		122DE8D86281D3D87DF886A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		1E99642F8DDFAF0093E8B8F8 /* ACLoupe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ACLoupe.m; path = MagnifyingGlass/ACLoupe.m; sourceTree = "<group>"; };
+		207C976FAA2D340130DFF4D1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		2FA595C6E96BB89FEBDD2805 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = Frameworks/GoogleMaps.framework; sourceTree = "<group>"; };
+		3C0B4156B1F2462C3ABDB685 /* libPods-iOS-MagnifyingGlass.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iOS-MagnifyingGlass.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C8B3E18FCFFADBF6C6D92C2 /* ACMagnifyingView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ACMagnifyingView.m; path = MagnifyingGlass/ACMagnifyingView.m; sourceTree = "<group>"; };
+		4CE35232E7739EEF673039C6 /* ACMagnifyingGlass.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ACMagnifyingGlass.h; path = MagnifyingGlass/ACMagnifyingGlass.h; sourceTree = "<group>"; };
+		535693FA188B91F0C6F6574B /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
+		6CFBAC17637BBB60A3E0DD60 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		7120AA53B4E0AEB656C5D8B1 /* Pods-iOS-MagnifyingGlass-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iOS-MagnifyingGlass-Private.xcconfig"; sourceTree = "<group>"; };
+		72ECF6415883B30F7F43D888 /* ACMagnifyingGlass.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ACMagnifyingGlass.m; path = MagnifyingGlass/ACMagnifyingGlass.m; sourceTree = "<group>"; };
+		7950500E1C7AAB7C35A731F3 /* Pods-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-environment.h"; sourceTree = "<group>"; };
+		7A19791EAE511E509DB7BF26 /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
+		91FE595157EEECF15199D4AE /* Pods-iOS-MagnifyingGlass-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-iOS-MagnifyingGlass-prefix.pch"; sourceTree = "<group>"; };
+		9275FAA82657A02ECA48EF05 /* Pods-iOS-MagnifyingGlass.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iOS-MagnifyingGlass.xcconfig"; sourceTree = "<group>"; };
+		95BB19037EAB4B602CA6CC51 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
+		B3638D10E908A0D146EB682B /* Pods-iOS-MagnifyingGlass-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-iOS-MagnifyingGlass-dummy.m"; sourceTree = "<group>"; };
+		B4858BF94EDB43D478AB850E /* ACLoupe.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ACLoupe.h; path = MagnifyingGlass/ACLoupe.h; sourceTree = "<group>"; };
+		B7E7221AF8B2FD4DEFBB5B40 /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
+		C2B3542B2BD426027307B9ED /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
+		C4C85F7EE107100EC740FF19 /* kb-loupe-hi_7.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "kb-loupe-hi_7.png"; path = "MagnifyingGlass/Resources/kb-loupe-hi_7.png"; sourceTree = "<group>"; };
+		C5A9294CC6C9D16EF5887D5A /* GoogleMaps.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = Frameworks/GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
+		DD5B6E812A42CDA53D28BFA6 /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
+		F754C63BE740A6C9887AFE23 /* ACMagnifyingView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ACMagnifyingView.h; path = MagnifyingGlass/ACMagnifyingView.h; sourceTree = "<group>"; };
+		FAF512A2C351B535E0D3CF35 /* kb-loupe-hi_6.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "kb-loupe-hi_6.png"; path = "MagnifyingGlass/Resources/kb-loupe-hi_6.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		68A22D808656B898ABC8A5B6 /* Frameworks */ = {
+		64E43EA4F36A414A8A4D7F91 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F8214BFBB9BCFB5F83FC192 /* Foundation.framework in Frameworks */,
+				8BF0010637FA80309288D88C /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C00773159FC96A0E73FAA786 /* Frameworks */ = {
+		F738ACA0DE3DC2FD9CB6004A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				430008B38699290E3E6C60E6 /* Foundation.framework in Frameworks */,
+				DB281CB149FA24ACA9E782DD /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		14391B87A453C6E7D21F26AD /* Pods */ = {
+		00928A525361F8DC6F5B1F90 /* GoogleMaps */ = {
 			isa = PBXGroup;
 			children = (
-				F0AA92F1BF814F1307D649D6 /* Pods-acknowledgements.markdown */,
-				39A4C173828BFA8ECE6B9C16 /* Pods-acknowledgements.plist */,
-				10E111AE689A303C07D7AA04 /* Pods-dummy.m */,
-				56CA61577A11C266D0D2F6DE /* Pods-environment.h */,
-				51471609EE147807C36EDEC9 /* Pods-resources.sh */,
-				CFBA5D96AE3A963F117D8DF7 /* Pods.debug.xcconfig */,
-				E0B89E10DCB579CFB5750C33 /* Pods.release.xcconfig */,
+				EE0238A3BDEEFE5867D7214A /* Frameworks */,
+				E4124B58C12614179DE59450 /* Resources */,
 			);
-			name = Pods;
-			path = "Target Support Files/Pods";
+			path = GoogleMaps;
 			sourceTree = "<group>";
 		};
-		161FAC72CBFD8048B66D9D37 /* Support Files */ = {
+		3E576B217DDBCD837247D0C9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3B8A49E771A3D423CCE20E7D /* Pods-iOS-MagnifyingGlass.xcconfig */,
-				0146B99789330525905199C0 /* Pods-iOS-MagnifyingGlass-Private.xcconfig */,
-				CA09A6718598EEDFC9365536 /* Pods-iOS-MagnifyingGlass-dummy.m */,
-				3CC41EC1F1560F23CA54B9D8 /* Pods-iOS-MagnifyingGlass-prefix.pch */,
+				207C976FAA2D340130DFF4D1 /* libPods.a */,
+				3C0B4156B1F2462C3ABDB685 /* libPods-iOS-MagnifyingGlass.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		41513717BE27A3C204CD10E2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FAF512A2C351B535E0D3CF35 /* kb-loupe-hi_6.png */,
+				C4C85F7EE107100EC740FF19 /* kb-loupe-hi_7.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		4971D7177A6C40B4153E8EFA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				00928A525361F8DC6F5B1F90 /* GoogleMaps */,
+				80C8E209F7D4BA0E7CB8DD19 /* iOS-MagnifyingGlass */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		4DBA0336D32855FB2354F011 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				122DE8D86281D3D87DF886A9 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		6A876B3B409619F447EB5116 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9275FAA82657A02ECA48EF05 /* Pods-iOS-MagnifyingGlass.xcconfig */,
+				7120AA53B4E0AEB656C5D8B1 /* Pods-iOS-MagnifyingGlass-Private.xcconfig */,
+				B3638D10E908A0D146EB682B /* Pods-iOS-MagnifyingGlass-dummy.m */,
+				91FE595157EEECF15199D4AE /* Pods-iOS-MagnifyingGlass-prefix.pch */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/Pods-iOS-MagnifyingGlass";
 			sourceTree = "<group>";
 		};
-		20B92544F2315FD3D1D99397 /* Pods */ = {
+		80C8E209F7D4BA0E7CB8DD19 /* iOS-MagnifyingGlass */ = {
 			isa = PBXGroup;
 			children = (
-				C687FE35C90EE67C017BB4A8 /* GoogleMaps */,
-				F76442A1B88867B031F8FD8A /* iOS-MagnifyingGlass */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		23CAAA1F1B70BC9CA1CCE683 = {
-			isa = PBXGroup;
-			children = (
-				7B9E1E5C0AEAEB4048E000DC /* Podfile */,
-				BBF779C804232A58FD276AE4 /* Frameworks */,
-				20B92544F2315FD3D1D99397 /* Pods */,
-				46CEB90CE260F53B210109EB /* Products */,
-				4D7087E0E359A6B1B78C3653 /* Targets Support Files */,
-			);
-			sourceTree = "<group>";
-		};
-		46CEB90CE260F53B210109EB /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				68AABEF2C4B6D6753E73A696 /* libPods.a */,
-				943DA5177AA0571591FAF52A /* libPods-iOS-MagnifyingGlass.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		4D7087E0E359A6B1B78C3653 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				14391B87A453C6E7D21F26AD /* Pods */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		646638ACEFDB2FE5C554B126 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				957553D9FA9FAB3D45041779 /* kb-loupe-hi_6.png */,
-				5649F3CD9AFC3FD7734DA055 /* kb-loupe-hi_7.png */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		8B57F9245EDF3AA50EEF58F1 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				50D863382C82AADCF90D9010 /* GoogleMaps.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		BBF779C804232A58FD276AE4 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				F83D8979F738AA1E9D49EEC9 /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		C687FE35C90EE67C017BB4A8 /* GoogleMaps */ = {
-			isa = PBXGroup;
-			children = (
-				8B57F9245EDF3AA50EEF58F1 /* Frameworks */,
-				DA4BDD02AE61874FBCEE58E5 /* Resources */,
-			);
-			path = GoogleMaps;
-			sourceTree = "<group>";
-		};
-		DA4BDD02AE61874FBCEE58E5 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				1DD74E5784E4613EE055E62E /* GoogleMaps.bundle */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		F76442A1B88867B031F8FD8A /* iOS-MagnifyingGlass */ = {
-			isa = PBXGroup;
-			children = (
-				DA8F4309A0C299C27B9C63B3 /* ACLoupe.h */,
-				3B457A16721F0463789335D1 /* ACLoupe.m */,
-				BE599D3633D4B8C04AF8232A /* ACMagnifyingGlass.h */,
-				532823B91D093DAC1FDAB700 /* ACMagnifyingGlass.m */,
-				CAEFA04AC6D7B8A5175947EB /* ACMagnifyingView.h */,
-				A2B2178DD2DD0CFD9FDAAF0C /* ACMagnifyingView.m */,
-				646638ACEFDB2FE5C554B126 /* Resources */,
-				161FAC72CBFD8048B66D9D37 /* Support Files */,
+				B4858BF94EDB43D478AB850E /* ACLoupe.h */,
+				1E99642F8DDFAF0093E8B8F8 /* ACLoupe.m */,
+				4CE35232E7739EEF673039C6 /* ACMagnifyingGlass.h */,
+				72ECF6415883B30F7F43D888 /* ACMagnifyingGlass.m */,
+				F754C63BE740A6C9887AFE23 /* ACMagnifyingView.h */,
+				4C8B3E18FCFFADBF6C6D92C2 /* ACMagnifyingView.m */,
+				41513717BE27A3C204CD10E2 /* Resources */,
+				6A876B3B409619F447EB5116 /* Support Files */,
 			);
 			path = "iOS-MagnifyingGlass";
 			sourceTree = "<group>";
 		};
-		F83D8979F738AA1E9D49EEC9 /* iOS */ = {
+		88216DA22C93DC9A0924E520 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				0D4CC5524B94489884FADE35 /* Foundation.framework */,
+				B7E7221AF8B2FD4DEFBB5B40 /* Pods-acknowledgements.markdown */,
+				7A19791EAE511E509DB7BF26 /* Pods-acknowledgements.plist */,
+				DD5B6E812A42CDA53D28BFA6 /* Pods-dummy.m */,
+				7950500E1C7AAB7C35A731F3 /* Pods-environment.h */,
+				535693FA188B91F0C6F6574B /* Pods-resources.sh */,
+				C2B3542B2BD426027307B9ED /* Pods.debug.xcconfig */,
+				95BB19037EAB4B602CA6CC51 /* Pods.release.xcconfig */,
 			);
-			name = iOS;
+			name = Pods;
+			path = "Target Support Files/Pods";
+			sourceTree = "<group>";
+		};
+		CC79396F3011E99999A7DDE6 = {
+			isa = PBXGroup;
+			children = (
+				6CFBAC17637BBB60A3E0DD60 /* Podfile */,
+				E8F530983AE670E474B03902 /* Frameworks */,
+				4971D7177A6C40B4153E8EFA /* Pods */,
+				3E576B217DDBCD837247D0C9 /* Products */,
+				DDDCB5BE98B857C08DCCEED2 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		DDDCB5BE98B857C08DCCEED2 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				88216DA22C93DC9A0924E520 /* Pods */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		E4124B58C12614179DE59450 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C5A9294CC6C9D16EF5887D5A /* GoogleMaps.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		E8F530983AE670E474B03902 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4DBA0336D32855FB2354F011 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EE0238A3BDEEFE5867D7214A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2FA595C6E96BB89FEBDD2805 /* GoogleMaps.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		9297F326B751EB4A92D5F83E /* Headers */ = {
+		93CEA1F92D8676DE60FB7695 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2FD8C166EF0A46D2EFA1A4C8 /* ACLoupe.h in Headers */,
-				E2A2A06D4A2547BAC37A3D36 /* ACMagnifyingGlass.h in Headers */,
-				BB1608EE44BBA19CB476AA32 /* ACMagnifyingView.h in Headers */,
+				0F9CBCD02A0F52096EAD136D /* ACLoupe.h in Headers */,
+				6A2D729D06331F07C6F63840 /* ACMagnifyingGlass.h in Headers */,
+				01E5E471EAFE6980A61920D3 /* ACMagnifyingView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		44303CE985507B7D00042B03 /* Pods-iOS-MagnifyingGlass */ = {
+		A910FFED6D8AAED525774257 /* Pods-iOS-MagnifyingGlass */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D10FB6ABD22ED2B54AC30625 /* Build configuration list for PBXNativeTarget "Pods-iOS-MagnifyingGlass" */;
+			buildConfigurationList = ACABB075C64D9ED635DE4E6E /* Build configuration list for PBXNativeTarget "Pods-iOS-MagnifyingGlass" */;
 			buildPhases = (
-				197033D5C5F7A0A6042D8B90 /* Sources */,
-				C00773159FC96A0E73FAA786 /* Frameworks */,
-				9297F326B751EB4A92D5F83E /* Headers */,
+				52FFB8ABFDEDDE5E0A4C80AC /* Sources */,
+				64E43EA4F36A414A8A4D7F91 /* Frameworks */,
+				93CEA1F92D8676DE60FB7695 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -236,101 +236,85 @@
 			);
 			name = "Pods-iOS-MagnifyingGlass";
 			productName = "Pods-iOS-MagnifyingGlass";
-			productReference = 943DA5177AA0571591FAF52A /* libPods-iOS-MagnifyingGlass.a */;
+			productReference = 3C0B4156B1F2462C3ABDB685 /* libPods-iOS-MagnifyingGlass.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		E1BF323E0534AF9BEB2DBA00 /* Pods */ = {
+		CF4C7499DDC3E13FDE30C7C9 /* Pods */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 966FA5CD66938B3359D816E2 /* Build configuration list for PBXNativeTarget "Pods" */;
+			buildConfigurationList = 74B39345DC99FE98D2C8B649 /* Build configuration list for PBXNativeTarget "Pods" */;
 			buildPhases = (
-				37A219FFEA0A5FDE5FABAAD4 /* Sources */,
-				68A22D808656B898ABC8A5B6 /* Frameworks */,
+				2084AAC8C8743A963181AD52 /* Sources */,
+				F738ACA0DE3DC2FD9CB6004A /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				EE51C3518B1A39891430FB2D /* PBXTargetDependency */,
+				FF195329D1E0587989B28159 /* PBXTargetDependency */,
 			);
 			name = Pods;
 			productName = Pods;
-			productReference = 68AABEF2C4B6D6753E73A696 /* libPods.a */;
+			productReference = 207C976FAA2D340130DFF4D1 /* libPods.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		8BD7718CB53E6E5C430F0E1A /* Project object */ = {
+		7E872A4CC933DF261F121AB2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0640;
 			};
-			buildConfigurationList = CE7CDFE9C8C98C48B7F565B6 /* Build configuration list for PBXProject "Pods" */;
+			buildConfigurationList = 94826E27CCF9276FABA26E9C /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 23CAAA1F1B70BC9CA1CCE683;
-			productRefGroup = 46CEB90CE260F53B210109EB /* Products */;
+			mainGroup = CC79396F3011E99999A7DDE6;
+			productRefGroup = 3E576B217DDBCD837247D0C9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E1BF323E0534AF9BEB2DBA00 /* Pods */,
-				44303CE985507B7D00042B03 /* Pods-iOS-MagnifyingGlass */,
+				CF4C7499DDC3E13FDE30C7C9 /* Pods */,
+				A910FFED6D8AAED525774257 /* Pods-iOS-MagnifyingGlass */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		197033D5C5F7A0A6042D8B90 /* Sources */ = {
+		2084AAC8C8743A963181AD52 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A5D60FA83B33A318F8F1F80 /* ACLoupe.m in Sources */,
-				D83556F70D37E7F1253FB828 /* ACMagnifyingGlass.m in Sources */,
-				B2818A879F2D6A6491065C7F /* ACMagnifyingView.m in Sources */,
-				E4185651EC3190A344C48590 /* Pods-iOS-MagnifyingGlass-dummy.m in Sources */,
+				6AF63C47C505341F808E24B3 /* Pods-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		37A219FFEA0A5FDE5FABAAD4 /* Sources */ = {
+		52FFB8ABFDEDDE5E0A4C80AC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				063C5BEBEE484CAEC6F21833 /* Pods-dummy.m in Sources */,
+				83D57E802EC9C5350D5BBB22 /* ACLoupe.m in Sources */,
+				B604C73E6A04A71402C8D9C3 /* ACMagnifyingGlass.m in Sources */,
+				0E9E37C2F6778396390C3860 /* ACMagnifyingView.m in Sources */,
+				26B9CF10E51C9F8F648C8E3B /* Pods-iOS-MagnifyingGlass-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		EE51C3518B1A39891430FB2D /* PBXTargetDependency */ = {
+		FF195329D1E0587989B28159 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-iOS-MagnifyingGlass";
-			target = 44303CE985507B7D00042B03 /* Pods-iOS-MagnifyingGlass */;
-			targetProxy = 5E1DA2E20FBA0DB990CCADEB /* PBXContainerItemProxy */;
+			target = A910FFED6D8AAED525774257 /* Pods-iOS-MagnifyingGlass */;
+			targetProxy = EE3020262613E7565DD23EB7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		26C1213A2B252CB2E0D318F2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0146B99789330525905199C0 /* Pods-iOS-MagnifyingGlass-Private.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-iOS-MagnifyingGlass/Pods-iOS-MagnifyingGlass-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		710A4B67411E83E7F74ECD52 /* Debug */ = {
+		354B875F89CB74A5C8E53A14 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -366,31 +350,16 @@
 				ONLY_ACTIVE_ARCH = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
+				USER_HEADER_SEARCH_PATHS = "/Users/Home/Desktop/Dev/Objective-C-Projects/GoogleMaps/Pods/GoogleMaps/Frameworks/**";
 			};
 			name = Debug;
 		};
-		757189021D68829CE25D7DEF /* Release */ = {
+		5268D5B1025E0D423FDA3DF1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0146B99789330525905199C0 /* Pods-iOS-MagnifyingGlass-Private.xcconfig */;
+			baseConfigurationReference = C2B3542B2BD426027307B9ED /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-iOS-MagnifyingGlass/Pods-iOS-MagnifyingGlass-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		95B316038C0BF2F934D322D9 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = CFBA5D96AE3A963F117D8DF7 /* Pods.debug.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
@@ -401,23 +370,23 @@
 			};
 			name = Debug;
 		};
-		ABB54EED5D34554C7C3895DF /* Release */ = {
+		9D19D606C8ED76E43B42E50F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E0B89E10DCB579CFB5750C33 /* Pods.release.xcconfig */;
+			baseConfigurationReference = 7120AA53B4E0AEB656C5D8B1 /* Pods-iOS-MagnifyingGlass-Private.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
-				MTL_ENABLE_DEBUG_INFO = NO;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-iOS-MagnifyingGlass/Pods-iOS-MagnifyingGlass-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
-			name = Release;
+			name = Debug;
 		};
-		D19734573275CF1FC657F9E5 /* Release */ = {
+		BC0BB0C476C1A84382037B8E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -447,41 +416,74 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
+				USER_HEADER_SEARCH_PATHS = "/Users/Home/Desktop/Dev/Objective-C-Projects/GoogleMaps/Pods/GoogleMaps/Frameworks/**";
 				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D94B117A54542D78F6A739AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7120AA53B4E0AEB656C5D8B1 /* Pods-iOS-MagnifyingGlass-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-iOS-MagnifyingGlass/Pods-iOS-MagnifyingGlass-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		DEACABCEEFADD6C3799A6A09 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95BB19037EAB4B602CA6CC51 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		966FA5CD66938B3359D816E2 /* Build configuration list for PBXNativeTarget "Pods" */ = {
+		74B39345DC99FE98D2C8B649 /* Build configuration list for PBXNativeTarget "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				95B316038C0BF2F934D322D9 /* Debug */,
-				ABB54EED5D34554C7C3895DF /* Release */,
+				5268D5B1025E0D423FDA3DF1 /* Debug */,
+				DEACABCEEFADD6C3799A6A09 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CE7CDFE9C8C98C48B7F565B6 /* Build configuration list for PBXProject "Pods" */ = {
+		94826E27CCF9276FABA26E9C /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				710A4B67411E83E7F74ECD52 /* Debug */,
-				D19734573275CF1FC657F9E5 /* Release */,
+				354B875F89CB74A5C8E53A14 /* Debug */,
+				BC0BB0C476C1A84382037B8E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D10FB6ABD22ED2B54AC30625 /* Build configuration list for PBXNativeTarget "Pods-iOS-MagnifyingGlass" */ = {
+		ACABB075C64D9ED635DE4E6E /* Build configuration list for PBXNativeTarget "Pods-iOS-MagnifyingGlass" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				26C1213A2B252CB2E0D318F2 /* Debug */,
-				757189021D68829CE25D7DEF /* Release */,
+				9D19D606C8ED76E43B42E50F /* Debug */,
+				D94B117A54542D78F6A739AB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 8BD7718CB53E6E5C430F0E1A /* Project object */;
+	rootObject = 7E872A4CC933DF261F121AB2 /* Project object */;
 }
