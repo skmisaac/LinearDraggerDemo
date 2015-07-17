@@ -12,7 +12,7 @@ import CoreLocation
 
 class GoogleDataProvider {
     
-    let apiKey = "AIzaSyD8_f9-07WfaVc9LMoDT6zTyGjsimFn-_w"
+    let apiKey = "AIzaSyD_JEJ_6sB9j6DFZ-Sblhs-3ZL5sg5Mzoo"
     var photoCache = [String:UIImage]()
     var placesTask = NSURLSessionDataTask()
     var session: NSURLSession {
@@ -30,25 +30,30 @@ class GoogleDataProvider {
             placesTask.cancel()
         }
         UIApplication.sharedApplication().networkActivityIndicatorVisible = true
-        placesTask = session.dataTaskWithURL(NSURL(string: urlString)!) {data, response, error in
-            UIApplication.sharedApplication().networkActivityIndicatorVisible = false
-            var placesArray = [GooglePlace]()
-            if let json = NSJSONSerialization.JSONObjectWithData(data, options:nil, error:nil) as? NSDictionary {
-                if let results = json["results"] as? NSArray {
-                    for rawPlace:AnyObject in results {
-                        let place = GooglePlace(dictionary: rawPlace as! NSDictionary, acceptedTypes: types)
-                        placesArray.append(place)
-                        if let reference = place.photoReference {
-                            self.fetchPhotoFromReference(reference) { image in
-                                place.photo = image
+        placesTask = session.dataTaskWithURL(NSURL(string: urlString)!) { data, response, downloadError in
+            if let error = downloadError {
+                return
+            }
+            else {
+                UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+                var placesArray = [GooglePlace]()
+                if let json = NSJSONSerialization.JSONObjectWithData(data, options:nil, error:nil) as? NSDictionary {
+                    if let results = json["results"] as? NSArray {
+                        for rawPlace:AnyObject in results {
+                            let place = GooglePlace(dictionary: rawPlace as! NSDictionary, acceptedTypes: types)
+                            placesArray.append(place)
+                            if let reference = place.photoReference {
+                                self.fetchPhotoFromReference(reference) { image in
+                                    place.photo = image
+                                }
                             }
                         }
                     }
                 }
-            }
             
-            dispatch_async(dispatch_get_main_queue()) {
-                completion(placesArray)
+                dispatch_async(dispatch_get_main_queue()) {
+                    completion(placesArray)
+                }
             }
         }
         placesTask.resume()
@@ -61,11 +66,12 @@ class GoogleDataProvider {
         
         UIApplication.sharedApplication().networkActivityIndicatorVisible = true
         session.dataTaskWithURL(NSURL(string: urlString)!) {data, response, downloadError in
-            UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+
             if let error = downloadError {
-                println("Could not complete the request \(error)")
+                return
             }
             else {
+                UIApplication.sharedApplication().networkActivityIndicatorVisible = false
                 var encodedRoute: String?
                 if let json = NSJSONSerialization.JSONObjectWithData(data, options:nil, error:nil) as? [String:AnyObject] {
                     if let routes = json["routes"] as AnyObject? as? [AnyObject] {

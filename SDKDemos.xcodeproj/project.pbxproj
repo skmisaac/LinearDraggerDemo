@@ -17,6 +17,9 @@
 		569DDF4A1B56418700928C8B /* MarkerInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 569DDF491B56418700928C8B /* MarkerInfoView.xib */; };
 		569DDF4E1B5645A200928C8B /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569DDF4D1B5645A200928C8B /* UIViewExtension.swift */; };
 		569DDF501B564A1800928C8B /* PlaceMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569DDF4F1B564A1800928C8B /* PlaceMarker.swift */; };
+		569DDF551B58BE4500928C8B /* ACLoupe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569DDF521B58BE4500928C8B /* ACLoupe.swift */; };
+		569DDF561B58BE4500928C8B /* ACMagnifyingGlass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569DDF531B58BE4500928C8B /* ACMagnifyingGlass.swift */; };
+		569DDF571B58BE4500928C8B /* ACMagnifyingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569DDF541B58BE4500928C8B /* ACMagnifyingView.swift */; };
 		56EDAF731B38112E00A7FFD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EDAF721B38112E00A7FFD2 /* AppDelegate.swift */; };
 		56EDAF751B38112E00A7FFD2 /* GMSMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EDAF741B38112E00A7FFD2 /* GMSMapViewController.swift */; };
 		56EDAF781B38112E00A7FFD2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56EDAF761B38112E00A7FFD2 /* Main.storyboard */; };
@@ -51,6 +54,9 @@
 		569DDF491B56418700928C8B /* MarkerInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MarkerInfoView.xib; sourceTree = "<group>"; };
 		569DDF4D1B5645A200928C8B /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		569DDF4F1B564A1800928C8B /* PlaceMarker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceMarker.swift; sourceTree = "<group>"; };
+		569DDF521B58BE4500928C8B /* ACLoupe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACLoupe.swift; sourceTree = "<group>"; };
+		569DDF531B58BE4500928C8B /* ACMagnifyingGlass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACMagnifyingGlass.swift; sourceTree = "<group>"; };
+		569DDF541B58BE4500928C8B /* ACMagnifyingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACMagnifyingView.swift; sourceTree = "<group>"; };
 		56EDAF6D1B38112E00A7FFD2 /* SDKDemos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SDKDemos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56EDAF711B38112E00A7FFD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56EDAF721B38112E00A7FFD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -97,13 +103,6 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		5630263E1B4A98DC005AA216 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
 		566B3B7A1B4BC1BC00FE4993 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -135,10 +134,19 @@
 			name = Controllers;
 			sourceTree = "<group>";
 		};
+		569DDF511B58BE2A00928C8B /* iOS-MagnifyingGlass-Swift */ = {
+			isa = PBXGroup;
+			children = (
+				569DDF521B58BE4500928C8B /* ACLoupe.swift */,
+				569DDF531B58BE4500928C8B /* ACMagnifyingGlass.swift */,
+				569DDF541B58BE4500928C8B /* ACMagnifyingView.swift */,
+			);
+			name = "iOS-MagnifyingGlass-Swift";
+			sourceTree = "<group>";
+		};
 		56EDAF641B38112E00A7FFD2 = {
 			isa = PBXGroup;
 			children = (
-				5630263E1B4A98DC005AA216 /* Resources */,
 				56EDAF6F1B38112E00A7FFD2 /* SDKDemos */,
 				56EDAF851B38112E00A7FFD2 /* SDKDemosTests */,
 				56EDAF6E1B38112E00A7FFD2 /* Products */,
@@ -159,6 +167,7 @@
 		56EDAF6F1B38112E00A7FFD2 /* SDKDemos */ = {
 			isa = PBXGroup;
 			children = (
+				569DDF511B58BE2A00928C8B /* iOS-MagnifyingGlass-Swift */,
 				56EDAF721B38112E00A7FFD2 /* AppDelegate.swift */,
 				569DDF441B56406400928C8B /* Controllers */,
 				569DDF431B56405700928C8B /* Views */,
@@ -346,6 +355,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				56EDAF751B38112E00A7FFD2 /* GMSMapViewController.swift in Sources */,
+				569DDF571B58BE4500928C8B /* ACMagnifyingView.swift in Sources */,
+				569DDF561B58BE4500928C8B /* ACMagnifyingGlass.swift in Sources */,
 				569DDF461B56409700928C8B /* TypesTableViewController.swift in Sources */,
 				569DDF401B553F7500928C8B /* GoogleDataProvider.swift in Sources */,
 				569DDF501B564A1800928C8B /* PlaceMarker.swift in Sources */,
@@ -353,6 +364,7 @@
 				569DDF4E1B5645A200928C8B /* UIViewExtension.swift in Sources */,
 				569DDF481B56413700928C8B /* MarkerInfoView.swift in Sources */,
 				56EDAF731B38112E00A7FFD2 /* AppDelegate.swift in Sources */,
+				569DDF551B58BE4500928C8B /* ACLoupe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

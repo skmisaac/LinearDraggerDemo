@@ -15,12 +15,10 @@ class GMSMapViewController: UIViewController, CLLocationManagerDelegate, GMSMapV
     // MARK: - IBOutlet
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var mapCenterPinImage: UIImageView!
-    @IBOutlet weak var pinImageVerticalConstraint: NSLayoutConstraint!
     
     // MARK: - Stored Properties
     let MY_LATITUDE: CLLocationDegrees = 22.3383
     let MY_LONGITUDE: CLLocationDegrees = 114.171
-    let minDistance = 100.0
     
     var loupe: ACLoupe!
     var magnifyingGlass: ACMagnifyingGlass!
@@ -34,9 +32,8 @@ class GMSMapViewController: UIViewController, CLLocationManagerDelegate, GMSMapV
     
     var firstContactPoint = CGPoint()
     var draggingContactPoint = CGPoint()
-    var effectiveWidth: CGFloat = 0.0
-    
-    var selectedMarker: PlaceMarker?
+
+    var currentSelectedMarker: PlaceMarker?
     var markersArray = [PlaceMarker]()
     var markersInBoundArray = [PlaceMarker]()
     
@@ -44,6 +41,12 @@ class GMSMapViewController: UIViewController, CLLocationManagerDelegate, GMSMapV
     var dataProvider = GoogleDataProvider()
     
     var searchedTypes = ["bakery", "bar", "cafe", "grocery_or_supermarket", "restaurant"]
+    
+    var effectiveWidth: CGFloat {
+        get {
+            return (view.frame.size.width - firstContactPoint.x) / CGFloat(markersInBoundArray.count)
+        }
+    }
     
     var mapRadius: Double {
         get
@@ -88,8 +91,6 @@ class GMSMapViewController: UIViewController, CLLocationManagerDelegate, GMSMapV
         mapView.myLocationEnabled = true
         mapView.settings.consumesGesturesInView = false
         
-        
-        
         // Places Client
         placesClient = GMSPlacesClient()
         
@@ -109,7 +110,7 @@ class GMSMapViewController: UIViewController, CLLocationManagerDelegate, GMSMapV
         self.mapView.padding = UIEdgeInsets(top: self.topLayoutGuide.length, left: 0, bottom: barHeight!, right: 0)
     }
     
-    // MARK: - Helper functions
+    // MARK: - @IBAction functions
     
     @IBAction func didTapAddMarker() {
         for i in 1...10 {
@@ -123,8 +124,42 @@ class GMSMapViewController: UIViewController, CLLocationManagerDelegate, GMSMapV
         }
     }
     
-    @IBAction func didTapClear() {
-        mapView.clear()
+    @IBAction func refreshPlaces(sender: AnyObject) {
+        fetchNearbyPlaces(mapView.camera.target)
+    }
+    
+    @IBAction func didTapClear() { mapView.clear() }
+    
+    // MARK: - Helper Functions
+    func didTapMyLocationButtonForMapView(mapView: GMSMapView!) -> Bool {
+        mapView.selectedMarker = nil
+        routeLine?.map = nil
+        return false
+    }
+    
+    func selectMarkersInBound(radius: CGFloat) {
+        markersInBoundArray.removeAll(keepCapacity: true)
+        for marker in markersArray {
+            if ( isInBound(mapView.projection.pointForCoordinate(marker.position)) ) {
+                markersInBoundArray.append(marker)
+            }
+        }
+    }
+    
+    func isInBound(point: CGPoint ) -> Bool {
+        if ( point.x >= firstContactPoint.x &&
+            point.x < view.frame.width &&
+            point.y > 0 &&
+            point.y < view.frame.height ) {
+                return true
+        }
+        return false
+    }
+    
+    func sortByXcoordinate() {
+        markersInBoundArray.sort() {
+            self.mapView.projection.pointForCoordinate($0.position).x < self.mapView.projection.pointForCoordinate($1.position).x
+        }
     }
 
     func randomZeroToOne() -> Double {
@@ -159,15 +194,11 @@ class GMSMapViewController: UIViewController, CLLocationManagerDelegate, GMSMapV
     }
     
     // MARK: - CLLocationManager Delegate Methods
-    
     func locationManager(manager: CLLocationManager!, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
         // 2
         if status == .AuthorizedWhenInUse {
             // 3
             locationManager.startUpdatingLocation()
-            // 4
-            mapView.myLocationEnabled = true
-            mapView.settings.myLocationButton = true
         }
     }
     
@@ -179,20 +210,32 @@ class GMSMapViewController: UIViewController, CLLocationManagerDelegate, GMSMapV
             fetchNearbyPlaces(location.coordinate)
         }
     }
+    
+    // MARK: - Types Controller Delegate
+    func typesController(controller: TypesTableViewController, didSelectTypes types: [String]) {
+        searchedTypes = sorted(controller.selectedTypes)
+        // 9
+        if (!searchedTypes.isEmpty) {
+            fetchNearbyPlaces(mapView.camera.target)
+        }
+        else {
+            mapView.clear()
+            markersArray.removeAll(keepCapacity: true)
+            markersInBoundArray.removeAll(keepCapacity: true)
+        }
+        
+        dismissViewControllerAnimated(true, completion: nil)
+    }
  
 
     // MARK: - GMSMapView Delegate Methods
     func mapView(mapView: GMSMapView!, idleAtCameraPosition position: GMSCameraPosition!) {
         fetchNearbyPlaces( mapView.camera.target )
     }
-
-    func mapView(mapView: GMSMapView!, didBeginDraggingMarker marker: GMSMarker!) {
-        println("mapView(_: didBeginDraggingMarker: ")
-    }
     
     func mapView(mapView: GMSMapView!, didTapAtCoordinate coordinate: CLLocationCoordinate2D) {
         routeLine?.map = nil
-        selectedMarker!.icon = UIImage(named: selectedMarker!.place.placeType + "_pin")
+        currentSelectedMarker!.icon = UIImage(named: currentSelectedMarker!.place.placeType + "_pin")
     }
     
     func mapView(mapView: GMSMapView!, didLongPressAtCoordinate coordinate: CLLocationCoordinate2D) {
@@ -206,13 +249,9 @@ class GMSMapViewController: UIViewController, CLLocationManagerDelegate, GMSMapV
         // 1
         if let placeMarker = marker as? PlaceMarker {
         
-            var placeXY = mapView.projection.pointForCoordinate(placeMarker.position)
-        
-            // 2
             if let infoView = UIView.viewFromNibName("MarkerInfoView") as? MarkerInfoView {
                 infoView.nameLabel.text = placeMarker.place.name
                 
-                //4
                 if let photo = placeMarker.place.photo {
                     infoView.placePhoto.image = photo
                 }
@@ -234,59 +273,25 @@ class GMSMapViewController: UIViewController, CLLocationManagerDelegate, GMSMapV
     func mapView(mapView: GMSMapView!, didTapInfoWindowOfMarker marker: GMSMarker!) {
         routeLine?.map = nil
 
-
         // 1
-        let googleMarker = mapView.selectedMarker as! PlaceMarker
-        googleMarker.icon = UIImage(named: googleMarker.place.placeType + "_pin")
-        
-        // 2
-        dataProvider.fetchDirectionsFrom(mapView.myLocation.coordinate, to: googleMarker.place.coordinate ) { optionalRoute in
-            if let encodedRoute = optionalRoute
-            {
-                // 3
-                let path = GMSPath(fromEncodedPath: encodedRoute)
-                self.routeLine = GMSPolyline(path: path)
-                // 4
-                self.routeLine!.strokeWidth = 4.0
-                self.routeLine!.tappable    = true
-                self.routeLine!.map         = self.mapView
-                self.routeLine!.strokeColor = self.randomLineColor
+        if let googleMarker = mapView.selectedMarker as? PlaceMarker {
+            googleMarker.icon = UIImage(named: googleMarker.place.placeType + "_pin")
+
+            // 2
+            dataProvider.fetchDirectionsFrom(mapView.myLocation.coordinate, to: googleMarker.place.coordinate ) { optionalRoute in
+                if let encodedRoute = optionalRoute
+                {
+                    // 3
+                    let path = GMSPath(fromEncodedPath: encodedRoute)
+                    self.routeLine = GMSPolyline(path: path)
+                    // 4
+                    self.routeLine!.strokeWidth = 4.0
+                    self.routeLine!.tappable    = true
+                    self.routeLine!.map         = self.mapView
+                    self.routeLine!.strokeColor = self.randomLineColor
+                    self.routeLine!.geodesic    = true
+                }
             }
-        }
-    }
-    
-    // MARK: - Helper Functions
-    func didTapMyLocationButtonForMapView(mapView: GMSMapView!) -> Bool {
-        mapView.selectedMarker = nil
-        return false
-    }
-    
-    func selectMarkersInBound(radius: CGFloat) {
-        markersInBoundArray.removeAll(keepCapacity: true)
-        for marker in markersArray {
-            if ( isInBound(mapView.projection.pointForCoordinate(marker.position)) ) {
-                markersInBoundArray.append(marker)
-            }
-        }
-    }
-    
-    func isInBound(point: CGPoint ) -> Bool {
-        if ( point.x >= firstContactPoint.x &&
-             point.x < view.frame.width &&
-             point.y > 0 &&
-             point.y < view.frame.height ) {
-            return true
-        }
-        return false
-    }
-    
-    func getEffectiveWidth() -> CGFloat {
-        return view.frame.size.width - firstContactPoint.x
-    }
-    
-    func sortByXcoordinate() {
-        markersInBoundArray.sort() {
-            self.mapView.projection.pointForCoordinate($0.position).x < self.mapView.projection.pointForCoordinate($1.position).x
         }
     }
     
@@ -295,7 +300,6 @@ class GMSMapViewController: UIViewController, CLLocationManagerDelegate, GMSMapV
         if (recognizer.state == UIGestureRecognizerState.Began) {
             selectMarkersInBound(self.view.frame.width)
             if ( !markersInBoundArray.isEmpty ) {
-                effectiveWidth = getEffectiveWidth() / CGFloat(markersInBoundArray.count)
                 sortByXcoordinate()
             }
 
@@ -308,13 +312,13 @@ class GMSMapViewController: UIViewController, CLLocationManagerDelegate, GMSMapV
                 if (draggingContactPoint.x >= firstContactPoint.x) {
                     kIndex = Int(dist(firstContactPoint, target: draggingContactPoint) / effectiveWidth)
                 }
-                if ( selectedMarker != nil ) {
-                    selectedMarker!.icon = UIImage(named: selectedMarker!.place.placeType + "_pin")
+                if ( currentSelectedMarker != nil ) {
+                    currentSelectedMarker!.icon = UIImage(named: currentSelectedMarker!.place.placeType + "_pin")
                 }
-                selectedMarker = markersInBoundArray[safe:kIndex]
-                if ((selectedMarker) != nil) {
-                    selectedMarker?.icon = UIImage(named: selectedMarker!.place.placeType + "_pin_selected")
-                    magnifyingView.addMagnifyingGlassAtPoint(mapView.projection.pointForCoordinate(selectedMarker!.position))
+                currentSelectedMarker = markersInBoundArray[safe:kIndex]
+                if ( currentSelectedMarker != nil) {
+                    currentSelectedMarker?.icon = UIImage(named: currentSelectedMarker!.place.placeType + "_pin_selected")
+                    magnifyingView.addMagnifyingGlassAtPoint(mapView.projection.pointForCoordinate(currentSelectedMarker!.position))
                 }
             }
         }
@@ -323,19 +327,14 @@ class GMSMapViewController: UIViewController, CLLocationManagerDelegate, GMSMapV
                 mapView.settings.setAllGesturesEnabled(true)
                 magnifyingView.removeMagnifyingGlass()
 
-                if ( selectedMarker != nil ) {
-                    mapView.selectedMarker = selectedMarker
-                    mapView(mapView, didTapInfoWindowOfMarker: selectedMarker)
+                if ( currentSelectedMarker != nil ) {
+                    mapView.selectedMarker = currentSelectedMarker
+                    mapView(mapView, didTapInfoWindowOfMarker: currentSelectedMarker)
                 }
             }
         }
         
     }
-    
-    @IBAction func refreshPlaces(sender: AnyObject) {
-        fetchNearbyPlaces(mapView.camera.target)
-    }
-    
     
     func fetchNearbyPlaces(coordinate: CLLocationCoordinate2D) {
         dataProvider.fetchPlacesNearCoordinate(coordinate, radius: mapRadius, types: searchedTypes) { places in
@@ -348,34 +347,6 @@ class GMSMapViewController: UIViewController, CLLocationManagerDelegate, GMSMapV
         }
     }
     
-    func reverseGeocodeCoordinate(coordinate: CLLocationCoordinate2D) {
-        // 1
-        // let geocoder = GMSGeocoder()
-        /*
-        // 2
-        geocoder.reverseGeocodeCoordinate(coordinate) { response, error in
-            if let address = response?.firstResult() {
-                
-                self.addressLabel.unlock()
-                // 3
-                let lines = address.lines as! [String]
-                self.addressLabel.text = join("\n", lines)
-                
-                // 4-1
-                let labelHeight = self.addressLabel.intrinsicContentSize().height
-                self.mapView.padding = UIEdgeInsets(top: self.topLayoutGuide.length, left: 0, bottom: labelHeight, right: 0)
-                
-                //4
-                UIView.animateWithDuration(0.25) {
-                    // 4-2
-                    // update locaion pin's position to match map's padding by adjusting its vertical layout constraint
-                    self.pinImageVerticalConstraint.constant = ((labelHeight - self.topLayoutGuide.length) * 0.5)
-                    self.view.layoutIfNeeded()
-                }
-            }
-        }*/
-    }
-    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "Types Segue" {
             let navigationController = segue.destinationViewController as! UINavigationController
@@ -385,21 +356,6 @@ class GMSMapViewController: UIViewController, CLLocationManagerDelegate, GMSMapV
         }
     }
     
-    // MARK: - Types Controller Delegate
-    func typesController(controller: TypesTableViewController, didSelectTypes types: [String]) {
-        searchedTypes = sorted(controller.selectedTypes)
-        // 9
-        if (!searchedTypes.isEmpty) {
-            fetchNearbyPlaces(mapView.camera.target)
-        }
-        else {
-            mapView.clear()
-            markersArray.removeAll(keepCapacity: true)
-            markersInBoundArray.removeAll(keepCapacity: true)
-        }
-        
-        dismissViewControllerAnimated(true, completion: nil)
-    }
 }
 
 extension Array {
