@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Bal-sj-3oN">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -21,10 +20,10 @@
             </objects>
             <point key="canvasLocation" x="-488" y="460"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Choose Markers Type-->
         <scene sceneID="Y3H-zr-lF2">
             <objects>
-                <tableViewController id="XYk-tC-LCY" customClass="TypesTableViewController" customModule="SDKDemos" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Choose Marker Type" id="XYk-tC-LCY" userLabel="Choose Markers Type" customClass="TypesTableViewController" customModule="SDKDemos" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="wfs-af-qrw">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -94,21 +93,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lpy-qg-VCW" customClass="GMSMapView">
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tqf-mS-dYF">
-                                        <rect key="frame" x="8" y="470" width="584" height="21"/>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstItem="Tqf-mS-dYF" firstAttribute="leading" secondItem="lpy-qg-VCW" secondAttribute="leadingMargin" id="2hH-cn-NGp"/>
-                                    <constraint firstItem="Tqf-mS-dYF" firstAttribute="trailing" secondItem="lpy-qg-VCW" secondAttribute="trailingMargin" id="5FV-EX-p8z"/>
-                                    <constraint firstAttribute="bottom" secondItem="Tqf-mS-dYF" secondAttribute="bottom" constant="45" id="Rzi-ET-cDu"/>
-                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -119,22 +104,23 @@
                             <constraint firstAttribute="trailing" secondItem="lpy-qg-VCW" secondAttribute="trailing" id="wrL-V7-noY"/>
                         </constraints>
                     </view>
-                    <toolbarItems/>
+                    <toolbarItems>
+                        <barButtonItem title="Clear" id="C2z-Sg-yfG">
+                            <connections>
+                                <action selector="didTapClear" destination="Ljf-Kg-chK" id="wae-jR-wbV"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" id="eRx-xH-nB0">
-                        <barButtonItem key="leftBarButtonItem" systemItem="action" id="nIb-xN-T9m">
+                        <barButtonItem key="leftBarButtonItem" systemItem="bookmarks" id="nIb-xN-T9m">
                             <connections>
                                 <segue destination="CRr-GX-Ibg" kind="presentation" identifier="Types Segue" id="AMF-R4-wQ9"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="7WI-oF-nxj">
-                            <connections>
-                                <action selector="didTapAddMarker" destination="Ljf-Kg-chK" id="YXh-l3-G8a"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="e5Y-xA-uzs"/>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="addressLabel" destination="Tqf-mS-dYF" id="hfe-Me-2bD"/>
                         <outlet property="mapView" destination="lpy-qg-VCW" id="sYU-pc-m6t"/>
                     </connections>
                 </viewController>

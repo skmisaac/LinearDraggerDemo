@@ -13,7 +13,7 @@ import GoogleMaps
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var googleMapsApiKey = "AIzaSyCu4-wpkcuoB7RkwSOdeD_WnsxeAedTpck"
+    var googleMapsApiKey = "AIzaSyBXSDuNtIcdcSmm4SXvpluRxhjgZbzoXA8"
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
