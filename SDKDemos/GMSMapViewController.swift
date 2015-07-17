@@ -112,17 +112,7 @@ class GMSMapViewController: UIViewController, CLLocationManagerDelegate, GMSMapV
     
     // MARK: - @IBAction functions
     
-    @IBAction func didTapAddMarker() {
-        for i in 1...10 {
-            var delayInSeconds = Double(i) * 0.25
-            let popTime: dispatch_time_t = dispatch_time(DISPATCH_TIME_NOW, (Int64)(delayInSeconds * Double(NSEC_PER_SEC)) )
-            dispatch_after(popTime, dispatch_get_main_queue()) {
-                let region: GMSVisibleRegion = self.mapView.projection.visibleRegion()
-                let bounds: GMSCoordinateBounds = GMSCoordinateBounds(region: region)
-                self.addMarkerInBounds(bounds)
-            }
-        }
-    }
+
     
     @IBAction func refreshPlaces(sender: AnyObject) {
         fetchNearbyPlaces(mapView.camera.target)
@@ -160,30 +150,6 @@ class GMSMapViewController: UIViewController, CLLocationManagerDelegate, GMSMapV
         markersInBoundArray.sort() {
             self.mapView.projection.pointForCoordinate($0.position).x < self.mapView.projection.pointForCoordinate($1.position).x
         }
-    }
-
-    func randomZeroToOne() -> Double {
-        return Double(arc4random()) / Double(UInt32.max)
-    }
-    
-    func addMarkerInBounds(bounds: GMSCoordinateBounds) {
-        var latitude: CLLocationDegrees = bounds.southWest.latitude + randomZeroToOne() * (bounds.northEast.latitude - bounds.southWest.latitude)
-        var offset = (bounds.northEast.longitude < bounds.southWest.longitude)
-        var longitude: CLLocationDegrees = bounds.southWest.longitude + randomZeroToOne() * (bounds.northEast.longitude - bounds.southWest.longitude + (offset ? 360 : 0))
-        
-        if (longitude > 180.0) {
-            longitude -= 360.0
-        }
-        
-        let color = UIColor(hue: CGFloat(randomZeroToOne()), saturation: 1.0, brightness: 1.0, alpha: 1.0)
-        let randomCoordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
-        
-        var marker = GMSMarker(position: randomCoordinate)
-        marker.title = "Default"
-        marker.snippet = "Default Info"
-        marker.appearAnimation = kGMSMarkerAnimationPop
-        marker.icon = GMSMarker.markerImageWithColor(color)
-        marker.map = mapView
     }
     
     func dist(touchPoint: CGPoint, target: CGPoint) -> CGFloat {
@@ -229,13 +195,11 @@ class GMSMapViewController: UIViewController, CLLocationManagerDelegate, GMSMapV
  
 
     // MARK: - GMSMapView Delegate Methods
-    func mapView(mapView: GMSMapView!, idleAtCameraPosition position: GMSCameraPosition!) {
-        fetchNearbyPlaces( mapView.camera.target )
-    }
     
     func mapView(mapView: GMSMapView!, didTapAtCoordinate coordinate: CLLocationCoordinate2D) {
-        routeLine?.map = nil
-        currentSelectedMarker!.icon = UIImage(named: currentSelectedMarker!.place.placeType + "_pin")
+        if let marker = currentSelectedMarker {
+            marker.icon = UIImage(named: marker.place.placeType + "_pin")
+        }
     }
     
     func mapView(mapView: GMSMapView!, didLongPressAtCoordinate coordinate: CLLocationCoordinate2D) {
@@ -243,12 +207,11 @@ class GMSMapViewController: UIViewController, CLLocationManagerDelegate, GMSMapV
         firstContactPoint = mapView.projection.pointForCoordinate(coordinate)
         magnifyingView.addMagnifyingGlassAtPoint(firstContactPoint)
     }
-    
-    
+ 
     func mapView(mapView: GMSMapView!, markerInfoContents marker: GMSMarker!) -> UIView! {
-        // 1
         if let placeMarker = marker as? PlaceMarker {
-        
+            currentSelectedMarker = placeMarker
+            
             if let infoView = UIView.viewFromNibName("MarkerInfoView") as? MarkerInfoView {
                 infoView.nameLabel.text = placeMarker.place.name
                 
@@ -270,9 +233,13 @@ class GMSMapViewController: UIViewController, CLLocationManagerDelegate, GMSMapV
         }
     }
     
+    func mapView(mapView: GMSMapView!, didTapMarker marker: GMSMarker!) -> Bool {
+        routeLine?.map = nil
+        return false
+    }
+    
     func mapView(mapView: GMSMapView!, didTapInfoWindowOfMarker marker: GMSMarker!) {
         routeLine?.map = nil
-
         // 1
         if let googleMarker = mapView.selectedMarker as? PlaceMarker {
             googleMarker.icon = UIImage(named: googleMarker.place.placeType + "_pin")

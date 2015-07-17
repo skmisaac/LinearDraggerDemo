@@ -17,9 +17,6 @@
 		569DDF4A1B56418700928C8B /* MarkerInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 569DDF491B56418700928C8B /* MarkerInfoView.xib */; };
 		569DDF4E1B5645A200928C8B /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569DDF4D1B5645A200928C8B /* UIViewExtension.swift */; };
 		569DDF501B564A1800928C8B /* PlaceMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569DDF4F1B564A1800928C8B /* PlaceMarker.swift */; };
-		569DDF551B58BE4500928C8B /* ACLoupe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569DDF521B58BE4500928C8B /* ACLoupe.swift */; };
-		569DDF561B58BE4500928C8B /* ACMagnifyingGlass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569DDF531B58BE4500928C8B /* ACMagnifyingGlass.swift */; };
-		569DDF571B58BE4500928C8B /* ACMagnifyingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569DDF541B58BE4500928C8B /* ACMagnifyingView.swift */; };
 		56EDAF731B38112E00A7FFD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EDAF721B38112E00A7FFD2 /* AppDelegate.swift */; };
 		56EDAF751B38112E00A7FFD2 /* GMSMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EDAF741B38112E00A7FFD2 /* GMSMapViewController.swift */; };
 		56EDAF781B38112E00A7FFD2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56EDAF761B38112E00A7FFD2 /* Main.storyboard */; };
@@ -355,8 +352,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				56EDAF751B38112E00A7FFD2 /* GMSMapViewController.swift in Sources */,
-				569DDF571B58BE4500928C8B /* ACMagnifyingView.swift in Sources */,
-				569DDF561B58BE4500928C8B /* ACMagnifyingGlass.swift in Sources */,
 				569DDF461B56409700928C8B /* TypesTableViewController.swift in Sources */,
 				569DDF401B553F7500928C8B /* GoogleDataProvider.swift in Sources */,
 				569DDF501B564A1800928C8B /* PlaceMarker.swift in Sources */,
@@ -364,7 +359,6 @@
 				569DDF4E1B5645A200928C8B /* UIViewExtension.swift in Sources */,
 				569DDF481B56413700928C8B /* MarkerInfoView.swift in Sources */,
 				56EDAF731B38112E00A7FFD2 /* AppDelegate.swift in Sources */,
-				569DDF551B58BE4500928C8B /* ACLoupe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
